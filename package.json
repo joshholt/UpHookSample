@@ -1,0 +1,14 @@
+{
+	"name"   : "up-app-1",
+	"private": true,
+	"author" : "Josh Holt <holt.josh@gmail.com>",
+	"version": "0.0.1",
+	"dependencies" : {
+		"express"      : "3.0.0alpha1",
+		"jade"         : "*",
+		"stylus"       : "*",
+		"coffee-script": "*",
+		"up"           : "*",
+		"up-hook"      : "*"
+	}
+}
