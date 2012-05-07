@@ -1,13 +1,15 @@
 var up     = require('up'),
     http   = require('http'),
     uphook = require('up-hook'),
-    app    = require('./app'),
-    svr;
+    port   = process.env.PORT || 1337,
+    svr, httpServer;
 
-svr = up(app, __dirname + '/app');
+httpServer = http.createServer();
+
+svr = up(httpServer, __dirname + '/app');
 svr.use(uphook('/redeploy', {branch: 'master', cmd: "echo 'a'"}));
 
-app.listen(80, function (err) {
+httpServer.listen(port, function (err) {
   if (err) throw err;
-  console.log(' \033[96m - listening on *:80 \033[39m');
+  console.log(' \033[96m - listening on *:'+port+' \033[39m');
 });
