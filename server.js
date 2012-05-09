@@ -1,7 +1,7 @@
 var up     = require('up'),
     http   = require('http'),
     uphook = require('up-hook'),
-    port   = process.env.PORT || 1337,
+    port   = process.env.PORT || 80,
     svr, httpServer;
 
 httpServer = http.createServer();
