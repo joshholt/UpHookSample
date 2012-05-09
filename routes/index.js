@@ -3,7 +3,7 @@
   module.exports = {
     index: function(req, res, next) {
       return res.render('index', {
-        title: 'Holts.no-ip.org'
+        title: 'Holt\'s.no-ip.org'
       });
     }
   };
