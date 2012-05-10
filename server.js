@@ -7,7 +7,7 @@ var up     = require('up'),
 httpServer = http.createServer();
 
 svr = up(httpServer, __dirname + '/app');
-svr.use(uphook('/redeploy', {branch: 'master', cmd: "echo 'a'"}));
+svr.use(uphook('/redeploy', {branch: 'master'}));
 
 httpServer.listen(port, function (err) {
   if (err) throw err;
